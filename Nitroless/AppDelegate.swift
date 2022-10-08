@@ -6,25 +6,28 @@
 //
 
 import Cocoa
+import SwiftUI
 
-@main
+@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    
-
+    var popover = NSPopover.init()
+    var statusBar: StatusBarController?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        // Create the SwiftUI view that provides the contents
+        let contentView = ContentView()
+
+        // Set the SwiftUI's ContentView to the Popover's ContentViewController
+        popover.contentViewController = MainViewController()
+        popover.contentSize = NSSize(width: 512, height: 512)
+        popover.contentViewController?.view = NSHostingView(rootView: contentView)
+        
+        // Create the Status Bar Item with the Popover
+        statusBar = StatusBarController.init(popover)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
-    func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
-        return true
-    }
-
-
 }
 

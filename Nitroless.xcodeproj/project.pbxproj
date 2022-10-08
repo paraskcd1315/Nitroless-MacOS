@@ -8,18 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		E646733C28F1D8D400C071CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646733B28F1D8D400C071CA /* AppDelegate.swift */; };
-		E646733E28F1D8D400C071CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646733D28F1D8D400C071CA /* ViewController.swift */; };
+		E646733E28F1D8D400C071CA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646733D28F1D8D400C071CA /* MainViewController.swift */; };
 		E646734028F1D8D500C071CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E646733F28F1D8D500C071CA /* Assets.xcassets */; };
 		E646734328F1D8D500C071CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E646734128F1D8D500C071CA /* Main.storyboard */; };
+		E646734D28F1D97100C071CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646734C28F1D97100C071CA /* ContentView.swift */; };
+		E646735028F1DAB500C071CA /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646734F28F1DAB500C071CA /* StatusBarController.swift */; };
+		E646735328F1DAD900C071CA /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646735228F1DAD900C071CA /* EventMonitor.swift */; };
+		E6B5546828F1F1CA00AB5642 /* RepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5546728F1F1CA00AB5642 /* RepoView.swift */; };
+		E6B5546C28F1F32000AB5642 /* EmotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5546B28F1F32000AB5642 /* EmotesView.swift */; };
+		E6B5547028F1F53E00AB5642 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5546F28F1F53E00AB5642 /* List.swift */; };
+		E6B5547328F1F57B00AB5642 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = E6B5547228F1F57B00AB5642 /* Introspect */; };
+		E6B5547628F1F94F00AB5642 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E6B5547528F1F94F00AB5642 /* Kingfisher */; };
+		E6B5547928F1F98000AB5642 /* Emote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5547828F1F98000AB5642 /* Emote.swift */; };
+		E6B5547E28F1FB9500AB5642 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5547D28F1FB9500AB5642 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E646733828F1D8D400C071CA /* Nitroless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nitroless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E646733B28F1D8D400C071CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E646733D28F1D8D400C071CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E646733D28F1D8D400C071CA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E646733F28F1D8D500C071CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E646734228F1D8D500C071CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E646734428F1D8D500C071CA /* Nitroless.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nitroless.entitlements; sourceTree = "<group>"; };
+		E646734C28F1D97100C071CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E646734F28F1DAB500C071CA /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		E646735228F1DAD900C071CA /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		E6B5546728F1F1CA00AB5642 /* RepoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoView.swift; sourceTree = "<group>"; };
+		E6B5546B28F1F32000AB5642 /* EmotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotesView.swift; sourceTree = "<group>"; };
+		E6B5546F28F1F53E00AB5642 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		E6B5547828F1F98000AB5642 /* Emote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emote.swift; sourceTree = "<group>"; };
+		E6B5547D28F1FB9500AB5642 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6B5547628F1F94F00AB5642 /* Kingfisher in Frameworks */,
+				E6B5547328F1F57B00AB5642 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,13 +72,93 @@
 		E646733A28F1D8D400C071CA /* Nitroless */ = {
 			isa = PBXGroup;
 			children = (
+				E6B5547728F1F96000AB5642 /* Models */,
+				E6B5546D28F1F52200AB5642 /* Extensions */,
+				E646734E28F1DA9D00C071CA /* Utils */,
+				E646734A28F1D94E00C071CA /* Core */,
 				E646733B28F1D8D400C071CA /* AppDelegate.swift */,
-				E646733D28F1D8D400C071CA /* ViewController.swift */,
+				E646733D28F1D8D400C071CA /* MainViewController.swift */,
 				E646733F28F1D8D500C071CA /* Assets.xcassets */,
 				E646734128F1D8D500C071CA /* Main.storyboard */,
 				E646734428F1D8D500C071CA /* Nitroless.entitlements */,
 			);
 			path = Nitroless;
+			sourceTree = "<group>";
+		};
+		E646734A28F1D94E00C071CA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E6B5547A28F1FAC600AB5642 /* ViewModel */,
+				E6B5546928F1F30900AB5642 /* Emotes */,
+				E6B5546528F1F19800AB5642 /* Repo */,
+				E646734C28F1D97100C071CA /* ContentView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E646734E28F1DA9D00C071CA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E646734F28F1DAB500C071CA /* StatusBarController.swift */,
+				E646735228F1DAD900C071CA /* EventMonitor.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E6B5546528F1F19800AB5642 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				E6B5546628F1F1A000AB5642 /* Views */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		E6B5546628F1F1A000AB5642 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E6B5546728F1F1CA00AB5642 /* RepoView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E6B5546928F1F30900AB5642 /* Emotes */ = {
+			isa = PBXGroup;
+			children = (
+				E6B5546A28F1F31000AB5642 /* Views */,
+			);
+			path = Emotes;
+			sourceTree = "<group>";
+		};
+		E6B5546A28F1F31000AB5642 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E6B5546B28F1F32000AB5642 /* EmotesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E6B5546D28F1F52200AB5642 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E6B5546F28F1F53E00AB5642 /* List.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E6B5547728F1F96000AB5642 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E6B5547828F1F98000AB5642 /* Emote.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E6B5547A28F1FAC600AB5642 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E6B5547D28F1FB9500AB5642 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +177,10 @@
 			dependencies = (
 			);
 			name = Nitroless;
+			packageProductDependencies = (
+				E6B5547228F1F57B00AB5642 /* Introspect */,
+				E6B5547528F1F94F00AB5642 /* Kingfisher */,
+			);
 			productName = Nitroless;
 			productReference = E646733828F1D8D400C071CA /* Nitroless.app */;
 			productType = "com.apple.product-type.application";
@@ -105,6 +209,10 @@
 				Base,
 			);
 			mainGroup = E646732F28F1D8D400C071CA;
+			packageReferences = (
+				E6B5547128F1F57B00AB5642 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				E6B5547428F1F94F00AB5642 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = E646733928F1D8D400C071CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,8 +239,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E646733E28F1D8D400C071CA /* ViewController.swift in Sources */,
+				E646733E28F1D8D400C071CA /* MainViewController.swift in Sources */,
+				E6B5547028F1F53E00AB5642 /* List.swift in Sources */,
+				E646735328F1DAD900C071CA /* EventMonitor.swift in Sources */,
+				E646735028F1DAB500C071CA /* StatusBarController.swift in Sources */,
+				E6B5546C28F1F32000AB5642 /* EmotesView.swift in Sources */,
 				E646733C28F1D8D400C071CA /* AppDelegate.swift in Sources */,
+				E6B5547E28F1FB9500AB5642 /* ContentViewModel.swift in Sources */,
+				E6B5546828F1F1CA00AB5642 /* RepoView.swift in Sources */,
+				E646734D28F1D97100C071CA /* ContentView.swift in Sources */,
+				E6B5547928F1F98000AB5642 /* Emote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +391,8 @@
 				DEVELOPMENT_TEAM = CH3MQP3PYG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nitroless/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -282,6 +400,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kcddesigns.Nitroless;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +421,8 @@
 				DEVELOPMENT_TEAM = CH3MQP3PYG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nitroless/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -309,6 +430,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kcddesigns.Nitroless;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -339,6 +461,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E6B5547128F1F57B00AB5642 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+		E6B5547428F1F94F00AB5642 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E6B5547228F1F57B00AB5642 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6B5547128F1F57B00AB5642 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+		E6B5547528F1F94F00AB5642 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6B5547428F1F94F00AB5642 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E646733028F1D8D400C071CA /* Project object */;
 }
