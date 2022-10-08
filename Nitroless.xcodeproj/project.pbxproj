@@ -21,6 +21,7 @@
 		E6B5547628F1F94F00AB5642 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E6B5547528F1F94F00AB5642 /* Kingfisher */; };
 		E6B5547928F1F98000AB5642 /* Emote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5547828F1F98000AB5642 /* Emote.swift */; };
 		E6B5547E28F1FB9500AB5642 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5547D28F1FB9500AB5642 /* ContentViewModel.swift */; };
+		E6B5548128F21E8E00AB5642 /* Hovered.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5548028F21E8E00AB5642 /* Hovered.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		E6B5546F28F1F53E00AB5642 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		E6B5547828F1F98000AB5642 /* Emote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emote.swift; sourceTree = "<group>"; };
 		E6B5547D28F1FB9500AB5642 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		E6B5548028F21E8E00AB5642 /* Hovered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hovered.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		E6B5546528F1F19800AB5642 /* Repo */ = {
 			isa = PBXGroup;
 			children = (
+				E6B5547F28F21E7F00AB5642 /* Models */,
 				E6B5546628F1F1A000AB5642 /* Views */,
 			);
 			path = Repo;
@@ -159,6 +162,14 @@
 				E6B5547D28F1FB9500AB5642 /* ContentViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E6B5547F28F21E7F00AB5642 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E6B5548028F21E8E00AB5642 /* Hovered.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 				E6B5547028F1F53E00AB5642 /* List.swift in Sources */,
 				E646735328F1DAD900C071CA /* EventMonitor.swift in Sources */,
 				E646735028F1DAB500C071CA /* StatusBarController.swift in Sources */,
+				E6B5548128F21E8E00AB5642 /* Hovered.swift in Sources */,
 				E6B5546C28F1F32000AB5642 /* EmotesView.swift in Sources */,
 				E646733C28F1D8D400C071CA /* AppDelegate.swift in Sources */,
 				E6B5547E28F1FB9500AB5642 /* ContentViewModel.swift in Sources */,

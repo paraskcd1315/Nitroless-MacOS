@@ -7,6 +7,12 @@
 
 import Foundation
 
+struct Repo: Codable {
+    var active: Bool
+    let url: String
+    let emote: Emote
+}
+
 struct Emote: Codable {
     let name, icon, path: String
     let emotes: [EmoteElement]

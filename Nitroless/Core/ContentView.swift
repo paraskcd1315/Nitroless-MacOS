@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         HStack {
-            RepoView()
+            RepoView(viewModel: viewModel)
             EmotesView()
         }
         .frame(minWidth: 0,
