@@ -14,6 +14,7 @@ struct EmotesView: View {
     @State var hovered = Hovered(image: "", hover: false)
     @State var showToast: Bool = false;
     let pasteboard = NSPasteboard.general
+    @State private var showPicker = false
     
     var body: some View {
         if viewModel.selectedRepo.active == true {
@@ -41,13 +42,13 @@ struct EmotesView: View {
                     Spacer(minLength: 10)
                     HStack {
                         Button {
-                            print("do something")
+                            self.showPicker = true
                         } label: {
                             HStack {
                                 Image(systemName: "square.and.arrow.up.fill")
                                 Text("Share")
                             }
-                            .foregroundColor(self.hovered.image == "square.anow.up.fill" && self.hovered.hover == true ? Color(.white) : Color(red: 0.35, green: 0.40, blue: 0.95))
+                            .foregroundColor(self.hovered.image == "square.and.arrow.up.fill" && self.hovered.hover == true  ? Color(.white) : Color(red: 0.35, green: 0.40, blue: 0.95))
                             .padding(10)
                             .background(self.hovered.image == "square.and.arrow.up.fill" && self.hovered.hover == true ? Color(red: 0.35, green: 0.40, blue: 0.95) : Color(red: 0.21, green: 0.22, blue: 0.25))
                             .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
@@ -55,11 +56,14 @@ struct EmotesView: View {
                             .shadow(radius: 5)
                         }
                         .buttonStyle(.plain)
+                        .background(SharingsPicker(isPresented: $showPicker, sharingItems: ["Check out this Awesome Repo, \(viewModel.selectedRepo.emote.name) - \(viewModel.selectedRepo.url)"]))
                         .onHover { isHovered in
                             self.hovered = Hovered(image: "square.and.arrow.up.fill", hover: isHovered)
                         }
+
                         Button {
-                            print("do something")
+                            viewModel.removeFromUserDefaults(url: viewModel.selectedRepo.url)
+                            viewModel.deselectRepo()
                         } label: {
                             HStack {
                                 Image(systemName: "minus.circle.fill")

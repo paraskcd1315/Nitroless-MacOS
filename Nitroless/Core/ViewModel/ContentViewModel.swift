@@ -137,7 +137,8 @@ class ContentViewModel: ObservableObject {
                     guard let data = data else { return }
                     
                     do {
-                        let emote = try JSONDecoder().decode(Emote.self, from: data)
+                        var emote = try JSONDecoder().decode(Emote.self, from: data)
+                        emote = Emote(name: emote.name, icon: emote.icon, path: emote.path, emotes: emote.emotes.unique{$0.name == $1.name})
                         DispatchQueue.main.async {
                             let repo = Repo(active: false, url: urlString, emote: emote)
                             self.repos.append(repo)
