@@ -90,32 +90,17 @@ struct EmotesView: View {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 50))]) {
                     ForEach (viewModel.selectedRepo.emote.emotes, id: \.name) {
                         emote in
-                        if emote.type == .gif {
-                            Button {
-                                self.showToast = true
-                                pasteboard.clearContents()
-                                pasteboard.setString(String("\(viewModel.selectedRepo.url)\(viewModel.selectedRepo.emote.path == "" ? "" : "\(viewModel.selectedRepo.emote.path)/")\(emote.name).\(emote.type)"), forType: NSPasteboard.PasteboardType.string)
-                            } label: {
-                                AnimatedImage(url: URL(string: "\(viewModel.selectedRepo.url)\(viewModel.selectedRepo.emote.path == "" ? "" : "\(viewModel.selectedRepo.emote.path)/")\(emote.name).\(emote.type)"))
-                                    .resizable()
-                                    .frame(width: 48, height: 48)
+                        Button {
+                            self.showToast = true
+                            pasteboard.clearContents()
+                            pasteboard.setString(String("\(viewModel.selectedRepo.url)\(viewModel.selectedRepo.emote.path == "" ? "" : "\(viewModel.selectedRepo.emote.path)/")\(emote.name).\(emote.type)"), forType: NSPasteboard.PasteboardType.string)
+                        } label: {
+                            WebImage(url: URL(string: "\(viewModel.selectedRepo.url)\(viewModel.selectedRepo.emote.path == "" ? "" : "\(viewModel.selectedRepo.emote.path)/")\(emote.name).\(emote.type)"))
+                                .resizable()
+                                .frame(width: 48, height: 48)
                                 .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
-                            }
-                            .buttonStyle(.plain)
-                        } else {
-                            Button {
-                                self.showToast = true
-                                pasteboard.clearContents()
-                                pasteboard.setString(String("\(viewModel.selectedRepo.url)\(viewModel.selectedRepo.emote.path == "" ? "" : "\(viewModel.selectedRepo.emote.path)/")\(emote.name).\(emote.type)"), forType: NSPasteboard.PasteboardType.string)
-                            } label: {
-                                WebImage(url: URL(string: "\(viewModel.selectedRepo.url)\(viewModel.selectedRepo.emote.path == "" ? "" : "\(viewModel.selectedRepo.emote.path)/")\(emote.name).\(emote.type)"))
-                                    .resizable()
-                                    .frame(width: 48, height: 48)
-                                    .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
-                                    
-                            }
-                            .buttonStyle(.plain)
                         }
+                        .buttonStyle(.plain)
                     }
                 }
                 .padding(20)
