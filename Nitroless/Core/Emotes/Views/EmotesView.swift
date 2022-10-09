@@ -47,7 +47,7 @@ struct EmotesView: View {
                                 Image(systemName: "square.and.arrow.up.fill")
                                 Text("Share")
                             }
-                            .foregroundColor(self.hovered.image == "square.and.arrow.up.fill" && self.hovered.hover == true ? Color(.white) : Color(red: 0.35, green: 0.40, blue: 0.95))
+                            .foregroundColor(self.hovered.image == "square.anow.up.fill" && self.hovered.hover == true ? Color(.white) : Color(red: 0.35, green: 0.40, blue: 0.95))
                             .padding(10)
                             .background(self.hovered.image == "square.and.arrow.up.fill" && self.hovered.hover == true ? Color(red: 0.35, green: 0.40, blue: 0.95) : Color(red: 0.21, green: 0.22, blue: 0.25))
                             .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
@@ -91,30 +91,30 @@ struct EmotesView: View {
                     ForEach (viewModel.selectedRepo.emote.emotes, id: \.name) {
                         emote in
                         if emote.type == .gif {
-                            VStack {
-                                AnimatedImage(url: URL(string: "\(viewModel.selectedRepo.url)\(viewModel.selectedRepo.emote.path == "" ? "" : "\(viewModel.selectedRepo.emote.path)/")\(emote.name).\(emote.type)"))
-                                    .resizable()
-                                    .frame(width: 48, height: 48)
-                                    .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
-                            }
-                            .onTapGesture {
+                            Button {
                                 self.showToast = true
                                 pasteboard.clearContents()
                                 pasteboard.setString(String("\(viewModel.selectedRepo.url)\(viewModel.selectedRepo.emote.path == "" ? "" : "\(viewModel.selectedRepo.emote.path)/")\(emote.name).\(emote.type)"), forType: NSPasteboard.PasteboardType.string)
+                            } label: {
+                                AnimatedImage(url: URL(string: "\(viewModel.selectedRepo.url)\(viewModel.selectedRepo.emote.path == "" ? "" : "\(viewModel.selectedRepo.emote.path)/")\(emote.name).\(emote.type)"))
+                                    .resizable()
+                                    .frame(width: 48, height: 48)
+                                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                             }
+                            .buttonStyle(.plain)
                         } else {
-                            VStack {
+                            Button {
+                                self.showToast = true
+                                pasteboard.clearContents()
+                                pasteboard.setString(String("\(viewModel.selectedRepo.url)\(viewModel.selectedRepo.emote.path == "" ? "" : "\(viewModel.selectedRepo.emote.path)/")\(emote.name).\(emote.type)"), forType: NSPasteboard.PasteboardType.string)
+                            } label: {
                                 WebImage(url: URL(string: "\(viewModel.selectedRepo.url)\(viewModel.selectedRepo.emote.path == "" ? "" : "\(viewModel.selectedRepo.emote.path)/")\(emote.name).\(emote.type)"))
                                     .resizable()
                                     .frame(width: 48, height: 48)
                                     .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                                     
                             }
-                            .onTapGesture {
-                                self.showToast = true
-                                pasteboard.clearContents()
-                                pasteboard.setString(String("\(viewModel.selectedRepo.url)\(viewModel.selectedRepo.emote.path == "" ? "" : "\(viewModel.selectedRepo.emote.path)/")\(emote.name).\(emote.type)"), forType: NSPasteboard.PasteboardType.string)
-                            }
+                            .buttonStyle(.plain)
                         }
                     }
                 }
