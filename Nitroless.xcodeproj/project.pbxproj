@@ -14,14 +14,16 @@
 		E646734D28F1D97100C071CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646734C28F1D97100C071CA /* ContentView.swift */; };
 		E646735028F1DAB500C071CA /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646734F28F1DAB500C071CA /* StatusBarController.swift */; };
 		E646735328F1DAD900C071CA /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646735228F1DAD900C071CA /* EventMonitor.swift */; };
+		E66D666728F313C1007D8655 /* SharePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66D666628F313C1007D8655 /* SharePicker.swift */; };
+		E66D666A28F32518007D8655 /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = E66D666928F32518007D8655 /* SimpleToast */; };
 		E6B5546828F1F1CA00AB5642 /* RepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5546728F1F1CA00AB5642 /* RepoView.swift */; };
 		E6B5546C28F1F32000AB5642 /* EmotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5546B28F1F32000AB5642 /* EmotesView.swift */; };
 		E6B5547028F1F53E00AB5642 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5546F28F1F53E00AB5642 /* List.swift */; };
 		E6B5547328F1F57B00AB5642 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = E6B5547228F1F57B00AB5642 /* Introspect */; };
-		E6B5547628F1F94F00AB5642 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E6B5547528F1F94F00AB5642 /* Kingfisher */; };
 		E6B5547928F1F98000AB5642 /* Emote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5547828F1F98000AB5642 /* Emote.swift */; };
 		E6B5547E28F1FB9500AB5642 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5547D28F1FB9500AB5642 /* ContentViewModel.swift */; };
 		E6B5548128F21E8E00AB5642 /* Hovered.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5548028F21E8E00AB5642 /* Hovered.swift */; };
+		E6B5549928F3063400AB5642 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E6B5549828F3063400AB5642 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,7 @@
 		E646734C28F1D97100C071CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E646734F28F1DAB500C071CA /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		E646735228F1DAD900C071CA /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		E66D666628F313C1007D8655 /* SharePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePicker.swift; sourceTree = "<group>"; };
 		E6B5546728F1F1CA00AB5642 /* RepoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoView.swift; sourceTree = "<group>"; };
 		E6B5546B28F1F32000AB5642 /* EmotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotesView.swift; sourceTree = "<group>"; };
 		E6B5546F28F1F53E00AB5642 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
@@ -47,7 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6B5547628F1F94F00AB5642 /* Kingfisher in Frameworks */,
+				E6B5549928F3063400AB5642 /* SDWebImageSwiftUI in Frameworks */,
+				E66D666A28F32518007D8655 /* SimpleToast in Frameworks */,
 				E6B5547328F1F57B00AB5642 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +107,7 @@
 			children = (
 				E646734F28F1DAB500C071CA /* StatusBarController.swift */,
 				E646735228F1DAD900C071CA /* EventMonitor.swift */,
+				E66D666628F313C1007D8655 /* SharePicker.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -190,7 +195,8 @@
 			name = Nitroless;
 			packageProductDependencies = (
 				E6B5547228F1F57B00AB5642 /* Introspect */,
-				E6B5547528F1F94F00AB5642 /* Kingfisher */,
+				E6B5549828F3063400AB5642 /* SDWebImageSwiftUI */,
+				E66D666928F32518007D8655 /* SimpleToast */,
 			);
 			productName = Nitroless;
 			productReference = E646733828F1D8D400C071CA /* Nitroless.app */;
@@ -222,7 +228,8 @@
 			mainGroup = E646732F28F1D8D400C071CA;
 			packageReferences = (
 				E6B5547128F1F57B00AB5642 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
-				E6B5547428F1F94F00AB5642 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				E6B5549728F3063400AB5642 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				E66D666828F32518007D8655 /* XCRemoteSwiftPackageReference "SimpleToast" */,
 			);
 			productRefGroup = E646733928F1D8D400C071CA /* Products */;
 			projectDirPath = "";
@@ -251,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E646733E28F1D8D400C071CA /* MainViewController.swift in Sources */,
+				E66D666728F313C1007D8655 /* SharePicker.swift in Sources */,
 				E6B5547028F1F53E00AB5642 /* List.swift in Sources */,
 				E646735328F1DAD900C071CA /* EventMonitor.swift in Sources */,
 				E646735028F1DAB500C071CA /* StatusBarController.swift in Sources */,
@@ -475,6 +483,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E66D666828F32518007D8655 /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sanzaru/SimpleToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.2;
+			};
+		};
 		E6B5547128F1F57B00AB5642 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
@@ -483,26 +499,31 @@
 				minimumVersion = 0.1.4;
 			};
 		};
-		E6B5547428F1F94F00AB5642 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		E6B5549728F3063400AB5642 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E66D666928F32518007D8655 /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E66D666828F32518007D8655 /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
+		};
 		E6B5547228F1F57B00AB5642 /* Introspect */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E6B5547128F1F57B00AB5642 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
 		};
-		E6B5547528F1F94F00AB5642 /* Kingfisher */ = {
+		E6B5549828F3063400AB5642 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E6B5547428F1F94F00AB5642 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
+			package = E6B5549728F3063400AB5642 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

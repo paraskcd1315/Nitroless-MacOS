@@ -7,7 +7,7 @@
 
 import SwiftUI
 import AppKit
-import Kingfisher
+import SDWebImageSwiftUI
 
 struct RepoView: View {
     @StateObject var viewModel: ContentViewModel
@@ -37,6 +37,7 @@ struct RepoView: View {
                             }
                         }
                     }
+                    .shadow(radius: 5)
             }
             .onHover { isHovered in
                 self.hovered = Hovered(image: "Icon", hover: isHovered)
@@ -50,6 +51,7 @@ struct RepoView: View {
             }
             .onTapGesture {
                 viewModel.makeAllReposInactive()
+                viewModel.deselectRepo()
             }
             
             Divider()
@@ -66,7 +68,7 @@ struct RepoView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 12))
                             .animation(.spring(), value: self.hovered.hover && !repo.active)
                         
-                        KFImage(URL(string: "\(repo.url)/\(repo.emote.icon)"))
+                        WebImage(url: URL(string: "\(repo.url)/\(repo.emote.icon)"))
                             .resizable()
                             .frame(width: 48, height: 48)
                             .clipShape(RoundedRectangle(cornerRadius: (self.hovered.image == "\(repo.url)/\(repo.emote.icon)" && self.hovered.hover == true) || (repo.active == true) ? 8 : 99, style: .continuous))
@@ -81,6 +83,7 @@ struct RepoView: View {
                                     }
                                 }
                             }
+                            .shadow(radius: 5)
                     }
                     .onHover { isHovered in
                         self.hovered = Hovered(image: "\(repo.url)/\(repo.emote.icon)", hover: isHovered)
@@ -94,6 +97,7 @@ struct RepoView: View {
                     }
                     .onTapGesture {
                         viewModel.makeRepoActive(url: repo.url)
+                        viewModel.selectRepo(selectedRepo: Repo(active: true, url: repo.url, emote: repo.emote))
                     }
                 }
             }
@@ -110,7 +114,7 @@ struct RepoView: View {
                 Image(systemName: "plus.app.fill")
                     .resizable()
                     .clipShape(RoundedRectangle(cornerRadius: (self.hovered.image == "plus.app.fill" && self.hovered.hover == true) ? 8 : 99, style: .continuous))
-                    .background(RoundedRectangle(cornerRadius: 99, style: .continuous).fill(.white).frame(width: 30, height: 30))
+                    .background(RoundedRectangle(cornerRadius: 99, style: .continuous).fill((self.hovered.image == "plus.app.fill" && self.hovered.hover == true) ? .white : Color(red: 0.34, green: 0.95, blue: 0.53)).frame(width: 30, height: 30))
                     .foregroundColor((self.hovered.image == "plus.app.fill" && self.hovered.hover == true) ? Color(red: 0.34, green: 0.95, blue: 0.53) : Color(red: 0.21, green: 0.22, blue: 0.25))
                     .frame(width: 48, height: 48)
                     .animation(.spring(), value: (self.hovered.image == "plus.app.fill" && self.hovered.hover == true))
@@ -124,6 +128,7 @@ struct RepoView: View {
                             }
                         }
                     }
+                    .shadow(radius: 5)
             }
             .onHover { isHovered in
                 self.hovered = Hovered(image: "plus.app.fill", hover: isHovered)
@@ -140,6 +145,6 @@ struct RepoView: View {
             }
         }
         .removeBackground()
-        .frame(width: 82)
+        .frame(width: 78)
     }
 }

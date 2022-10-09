@@ -9,11 +9,20 @@ import SwiftUI
 
 class ContentViewModel: ObservableObject {
     @Published var repos = [Repo]()
+    @Published var selectedRepo = Repo(active: false, url: "", emote: Emote(name: "", icon: "", path: "", emotes: [EmoteElement]()))
     @Published var isLoading = false
     @Published var isHomeActive = true
     
     init() {
         self.fetchRepos()
+    }
+    
+    func selectRepo(selectedRepo: Repo) {
+        self.selectedRepo = selectedRepo
+    }
+    
+    func deselectRepo() {
+        self.selectedRepo = Repo(active: false, url: "", emote: Emote(name: "", icon: "", path: "", emotes: [EmoteElement]()))
     }
     
     func getRepoFromUser(title: String, question: String, defaultValue: String) {
